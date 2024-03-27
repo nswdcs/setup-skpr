@@ -4,9 +4,7 @@ runs:
   using: composite
   steps:
     - id: skpr-setup
+      shell: bash
       run: |
         gh release download --repo skpr/cli --pattern skpr_*_linux_amd64.deb -O skpr-cli.deb
         sudo dpkg -i skpr-cli.deb
-      shell: bash
-      env:
-        GH_TOKEN: ${{ github.token }}
