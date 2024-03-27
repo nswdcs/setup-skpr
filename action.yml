@@ -8,6 +8,3 @@ runs:
       run: |
         gh release download --repo skpr/cli --pattern skpr_*_linux_amd64.deb -O skpr-cli.deb
         sudo dpkg -i skpr-cli.deb
-    - id: skpr-version
-      shell: bash
-      run: skpr version
